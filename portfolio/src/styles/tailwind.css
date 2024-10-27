@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;                         
+
+
+.intro-fullscreen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.fade-in-effect {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.fade-in-effect.visible {
+    opacity: 1;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+@keyframes moveWave {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+.wave-top, .wave-bottom {
+    animation: moveWave 30s linear infinite;
+}
