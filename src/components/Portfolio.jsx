@@ -7,7 +7,7 @@ function Portfolio() {
    const [items, setItems] = useState([]);
 
    useEffect(() => {
-      const apiUrl = 'http://localhost:8000/api/portfolio/';
+      const apiUrl = import.meta.env.VITE_API_URL + "/portfolio/" || 'http://localhost:8000/api/experiences/';';
       axios.get(apiUrl)
          .then((response) => {
             setItems(response.data);
