@@ -7,7 +7,7 @@ function Portfolio() {
    const [items, setItems] = useState([]);
 
    useEffect(() => {
-      const apiUrl = process.env.VITE_API_URL + "/portfolio/" || 'http://localhost:8000/api/experiences/';';
+      const apiUrl = 'https://rji-portfolio-backend-126d5f0ba5b9.herokuapp.com/api/portfolio/';
       axios.get(apiUrl)
          .then((response) => {
             setItems(response.data);

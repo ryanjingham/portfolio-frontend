@@ -15,7 +15,7 @@ function Experience() {
 
     useEffect(() => {
       // Replace the URL with your actual endpoint URL
-      const apiUrl = process.env.VITE_API_URL + "/experiences/" || 'http://localhost:8000/api/experiences/';
+      const apiUrl = 'https://rji-portfolio-backend-126d5f0ba5b9.herokuapp.com/api/experiences/';
       axios.get(apiUrl)
         .then((response) => {
           setItems(response.data);
